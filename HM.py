@@ -7,7 +7,7 @@ def get_valid_word(words):
     word = random.choice(words) #randomly chooses something from the list: words.py
     while '-' in word or ' ' in word: 
         word = random.choice(words)
-    return word
+    return word.upper()
 
 def hangman():
     word = get_valid_word(words)
@@ -47,4 +47,5 @@ def hangman():
         print('You have died, sorry, the word was', word)
     else:
         print('You guessed the word, ', word , '!!' )
-hangman()
+if __name__ == '__main__':
+    hangman()
